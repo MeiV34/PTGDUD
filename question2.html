@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+</head>
+<body>
+
+    <script>
+        var Mark_Mass = prompt("mass of Mark: ");
+        var Mark_Height = prompt("height of Mark: ");
+        var BMI_Mark = Mark_Mass/(Mark_Height*Mark_Height);
+
+        var John_Mass = prompt("mass of John: ");
+        var John_Height = prompt("height of John: ");
+        var BMI_John = John_Mass/(John_Height*John_Height); 
+
+        var markHigherBMI = BMI_Mark > BMI_John
+
+        document.write("Mark's mass: " + Mark_Mass + " kg<br>");
+        document.write("Mark's height: " + Mark_Height + " m<br>");
+        document.write("Mark's BMI: " + BMI_Mark.toFixed(2) + "<br><br>");
+        
+        document.write("John's mass: " + John_Mass + " kg<br>");
+        document.write("John's height: " + John_Height + " m<br>");
+        document.write("John's BMI: " + BMI_John.toFixed(2) + "<br><br>");
+
+        if (BMI_Mark > BMI_John) {
+            document.write(`Mark's BMI (${BMI_Mark.toFixed(2)}) is higher than John's (${BMI_John.toFixed(2)})!`);
+        } else {
+            document.write(`John's BMI (${BMI_John.toFixed(2)}) is higher than Mark's (${BMI_Mark.toFixed(2)})!`);
+        }
+
+    </script>
+</body>
+</html>

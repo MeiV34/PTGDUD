@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+</head>
+<body>
+    <script>
+        var Dolphins_Scores = [];
+        var Koalas_Scores = [];
+
+        Dolphins_Scores.push(parseInt(prompt("Enter the score for Dolphins in competition 1:")));
+        Dolphins_Scores.push(parseInt(prompt("Enter the score for Dolphins in competition 2:")));
+        Dolphins_Scores.push(parseInt(prompt("Enter the score for Dolphins in competition 3:")));
+        
+        
+        Koalas_Scores.push(parseInt(prompt("Enter the score for Koalas in competition 1:")));
+        Koalas_Scores.push(parseInt(prompt("Enter the score for Koalas in competition 2:")));
+        Koalas_Scores.push(parseInt(prompt("Enter the score for Koalas in competition 3:")));
+
+        var averageDolphins = (Dolphins_Scores[0] + Dolphins_Scores[1] + Dolphins_Scores[2]) / 3;
+        var averageKoalas = (Koalas_Scores[0] + Koalas_Scores[1] + Koalas_Scores[2]) / 3;
+
+        document.write(`Dolphins score: ${Dolphins_Scores.join(", ")}<br>`);
+        document.write(`Koalas score: ${Koalas_Scores.join(", ")}<br><br>`);
+
+        document.write(`Average score of Dolphins: ${averageDolphins.toFixed(2)}<br>`);
+        document.write(`Average score of Koalas: ${averageKoalas.toFixed(2)}<br><br>`);
+
+        if (averageDolphins >= 100 && averageKoalas >= 100) {
+            if (averageDolphins > averageKoalas) {
+                document.write(`Dolphins win with an average score of ${averageDolphins.toFixed(2)}!`);
+            } else if (averageKoalas > averageDolphins) {
+                document.write(`Koalas win with an average score of ${averageKoalas.toFixed(2)}!`);
+            } else {
+                document.write(`It's a draw! Both teams have the same average score of ${averageDolphins.toFixed(2)}.`);
+            }
+        } else if (averageDolphins >= 100) {
+            document.write(`Dolphins win with an average score of ${averageDolphins.toFixed(2)}!`);
+        } else if (averageKoalas >= 100) {
+            document.write(`Koalas win with an average score of ${averageKoalas.toFixed(2)}!`);
+        } else {
+            document.write(`No team wins the trophy, as neither team reached the minimum score of 100.`);
+        }
+    </script>
+</body>
+</html>
